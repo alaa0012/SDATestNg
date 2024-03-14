@@ -14,7 +14,7 @@ Type username student into Username field.
 Type password incorrectPassword into Password field.
 Puch Submit button.
 Verify error message is displayed.
-Verify error message text is Your password is invalid!*/
+Verify error messagetext is Your password is invalid!*/
     @Test
     public void softAssert03(){
         SoftAssert sa =new SoftAssert();
