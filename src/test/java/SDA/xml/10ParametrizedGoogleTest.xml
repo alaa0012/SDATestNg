@@ -5,13 +5,13 @@
     <test name="Test 1">
         <parameter name="KeyWord" value="Java"/>
         <classes>
-            <class name="SDA.Tests.day16.task01"/>
+            <class name="SDA.Tests.day16.D16HW01"/>
         </classes>
     </test>
     <test name="Test 2">
         <parameter name="KeyWord" value="Selenium"/>
         <classes>
-            <class name="SDA.Tests.day16.task01"> </class>
+            <class name="SDA.Tests.day16.D16HW01"> </class>
         </classes>
     </test>
 </suite>

@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import SDA.utilities.TestBase;
 
-public class task03 extends TestBase {
+public class D16HW03 extends TestBase {
     @Test
     @Parameters({"username1", "password1"})
     public void softAssert03(String username1, String password1) {

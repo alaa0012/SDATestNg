@@ -2,8 +2,6 @@ package SDA.Tests.day16;
 
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -18,7 +16,7 @@ Click Submit button.
 Verify new page URL contains practicetestautomation.com/logged-in-successfully/
 You should execute this test with xml file
 */
-public class task02 extends TestBase {
+public class D16HW02 extends TestBase {
 
     @Test
     @Parameters({"username", "password"})

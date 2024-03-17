@@ -8,7 +8,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import SDA.utilities.TestBase;
 
-public class task01 extends TestBase {
+public class D16HW01 extends TestBase {
     @Test
     @Parameters("KeyWord")
     public void javaTest(String KeyWord) {
