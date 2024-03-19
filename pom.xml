@@ -12,6 +12,8 @@
         <maven.compiler.source>15</maven.compiler.source>
         <maven.compiler.target>15</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <aspectj.version>1.9.20.1</aspectj.version>
+
     </properties>
 
     <dependencies>
@@ -38,34 +40,55 @@
             <version>1.0.2</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>5.1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.2.5</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>2.25.0</version>
+        </dependency>
+
 
     </dependencies>
 
     <build>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.8.1</version>
-        </plugin>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>3.1.2</version>
-            <configuration>
-                <parallel>methods</parallel>
-                <threadCount>10</threadCount>
-                <redirectTestOutputToFile>true</redirectTestOutputToFile>
-                <!--
-                <suiteXmlFiles>
-                    <suiteXmlFile>12ParallelTestExecution.xml</suiteXmlFile>
-                </suiteXmlFiles>
-                -->
-                <includes>
-                    <include>SDA/Tests/dammy18/C02ParallelTest02.java</include>
-                </includes>
-            </configuration>
-        </plugin>
-    </plugins>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.1.2</version>
+                <configuration>
+                    <parallel>none</parallel>
+                    <threadCount>10</threadCount>
+                    <redirectTestOutputToFile>true</redirectTestOutputToFile>
+
+                    <suiteXmlFiles>
+                        <suiteXmlFile>AllureTest.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+
+                    <includes>
+                        <include> SDA/Tests/day19/C04AllureTest02.java </include>
+                    </includes>
+
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 </project>
